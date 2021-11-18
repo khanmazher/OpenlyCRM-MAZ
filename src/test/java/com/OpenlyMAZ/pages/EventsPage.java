@@ -15,62 +15,68 @@ public class EventsPage extends BasePage {
     public WebElement Event;
 
     @FindBy(id = "feed-cal-event-namecal_3Jcl")
-    public WebElement EVENT_NAME;
+    public WebElement eventName;
 
-    @FindBy(id = "feed-cal-event-fromcal_0Jcl")
-    public WebElement DATE_FROM;
+    @FindBy(name = "DATE_FROM")
+    public WebElement dateFrom;
 
-    @FindBy(id = "feed_cal_event_from_timecal_3Jcl")
-    public WebElement TIME_FROM;
+    @FindBy(name = "TIME_FROM")
+    public WebElement timeFrom;
 
-    @FindBy(id = "feed-cal-event-tocal_3Jcl")
-    public WebElement DATE_TO;
+    @FindBy(name = "DATE_TO")
+    public WebElement dateTo;
 
-    @FindBy(id = "feed_cal_event_to_timecal_3Jcl")
-    public WebElement TIME_TO;
+    @FindBy(name =  "TIME_TO")
+    public WebElement timeTo;
 
-    @FindBy(id = "feed-cal-tz-switchcal_3Jcl")
-    public WebElement Specifytimezone;
+    @FindBy(xpath = "//span[.='Specify time zone']")
+    public WebElement SpecifyTimezone;
 
     @FindBy(id = "feed-cal-tz-fromcal_3Jcl")
-    public WebElement TZ_FROM;
+    public WebElement timezoneFrom;
 
     @FindBy(id = "feed-cal-tz-tocal_3Jcl")
-    public WebElement TZ_TO;
+    public WebElement timezoneTo;
 
-    @FindBy(id = "feed-cal-reminder-contcal_3Jcl")
-    public WebElement EVENT_REMINDER;
-
-    @FindBy(id = "event-remind_countcal_3Jcl")
-    public WebElement EVENT_REMINDER_COUNT;
-
-    @FindBy(id = "event-remind_typecal_3Jcl")
-    public WebElement EVENT_REMINDER_TYPE;
-
-    @FindBy(id = "event-locationcal_3Jcl")
-    public WebElement EVENT_LOCATION;
+    @FindBy (id = "event-locationcal_3Jcl")
+    public WebElement eventLocation;
     //after this I should be able to select the location of the event from drop down list which I am unable to select.
 
-    @FindBy(id = "event-locationcal_3Jcl")
-    public WebElement EVENT_LOCATION;
-
     @FindBy(id = "feed-event-dest-add-link")
-    public WebElement ; //here I need to add people to the event
+    public WebElement email; //here I need to add people to the event
 
-    @FindBy(id = "feed-cal-additional-show")
-    public WebElement ; //here hidden box will open
+    @FindBy(id = "destDepartmentTab_calnAJEM3")
+    public  WebElement departments;
+
+    //@FindBy (xpath = "(//div[.='To all employees'])[1]")
+    //public WebElement allEmployee;
+
+    @FindBy(xpath = "(//div[@class='bx-finder-company-department-employee-name'])[1]")
+    public  WebElement user1;
+
+    @FindBy(xpath = "(//div[@class='bx-finder-company-department-employee-name'])[20]")
+    public  WebElement user2;
+
+    @FindBy(xpath = "(//div[@class='bx-finder-company-department-employee-name'])[100]")
+    public  WebElement user3;
+
+    @FindBy(xpath = "(//div[@class='bx-finder-company-department-employee-name'])[187]")
+    public  WebElement user4;
+
+    @FindBy (xpath = "(//span[@class='feed-event-more-link-icon'])[1]")
+    public  WebElement moreButton;
 
     @FindBy(id = "event-accessibilitycal_3Jcl")
-    public WebElement EVENT_ACCESSIBILITY; //further need to select from drop down options
+    public WebElement eventAccessibility; //further need to select from drop down options
 
     @FindBy(id = "event-repeatcal_3Jcl")
-    public WebElement EVENT_RRULE[FREQ];
+    public WebElement repeatBox;
 
     @FindBy(id = "event-importancecal_3Jcl")
-    public WebElement EVENT_IMPORTANCE;
+    public WebElement eventImportance;
 
     @FindBy(id = "blog-submit-button-save")
-    public WebElement Send;
+    public WebElement sendButton;
 
 
 }
