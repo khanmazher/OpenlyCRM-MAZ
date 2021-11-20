@@ -16,6 +16,27 @@ Feature: As a user I should be able to create an Event
     And the user selects the start time zone
     And the user selects the end time zone
 
+  //Scenario: Set Reminder
+    //When the user sets reminder
+
+  Scenario: Select Event location
+    When the user selects event location as Western meeting room
+
+  Scenario: Add attendee
+    When User clicks on "Add persons, groups or departments"
+    Then User clicks on Employees and Departments
+    And User selects persons, groups or departments from the available options
+
+  Scenario: Click On More and Send Message
+    When User clicks on more button
+    Then user clicks on event accessibility and selects free
+    Then user clicks on repeat option and selects never
+    Then the user clicks on event importance and selects normal
+    And the user clicks send button
+
+
+
+
 
 
 

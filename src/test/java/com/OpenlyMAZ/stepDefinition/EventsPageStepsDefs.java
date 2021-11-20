@@ -6,11 +6,15 @@ import com.OpenlyMAZ.pages.EventsPage;
 import com.OpenlyMAZ.utilities.BrowserUtils;
 import com.OpenlyMAZ.utilities.ConfigurationReader;
 import com.OpenlyMAZ.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
 
 public class EventsPageStepsDefs extends BasePage {
+
     EventsPage eventsPage = new EventsPage();
 
     @When("the user should click the events button")
@@ -27,7 +31,7 @@ public class EventsPageStepsDefs extends BasePage {
 
     @Then("the user select the start date")
     public void the_user_select_the_start_date() {
-       eventsPage.dateFrom.click(); //select method required
+        eventsPage.dateFrom.click(); //select method required
     }
 
     @Then("the user selects the start time")
@@ -42,21 +46,67 @@ public class EventsPageStepsDefs extends BasePage {
 
     @Then("the user selects the end time")
     public void the_user_selects_the_end_time() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        eventsPage.timeTo.click(); //select method required
     }
 
     @Then("the user selects the start time zone")
     public void the_user_selects_the_start_time_zone() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        eventsPage.timezoneFrom.click(); //select method required
+        eventsPage.eventLocation.findElement(By.id("feed-cal-tz-fromcal_3Jcl"));
+        Select.selectByValue("Europe/Istanbul");
     }
 
     @Then("the user selects the end time zone")
     public void the_user_selects_the_end_time_zone() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        eventsPage.timezoneTo.click(); //select method required
     }
 
+    @When("the user selects event location as Western meeting room")
+    public void theUserSelectsEventLocationAsWesternMeetingRoom() {
+        eventsPage.eventLocation.click(); //select method required
 
+    }
+
+    @When("User clicks on {string}")
+    public void userClicksOn() {
+        eventsPage.email.click();
+    }
+
+    @Then("User clicks on Employees and Departments")
+    public void userClicksOnEmployeesAndDepartments() {
+        eventsPage.departments.click();
+    }
+
+    @And("User selects persons, groups or departments from the available options")
+    public void userSelectsPersonsGroupsOrDepartmentsFromTheAvailableOptions() {
+        eventsPage.user1.click();//select method required
+        eventsPage.user2.click();//select method required
+        eventsPage.user3.click();//select method required
+        eventsPage.user4.click();//select method required
+    }
+
+    @When("User clicks on more button")
+    public void userClicksOnMoreButton() {
+        eventsPage.moreButton.click();
+    }
+
+    @Then("user clicks on event accessibility and selects free")
+    public void userClicksOnEventAccessibilityAndSelectsFree() {
+        eventsPage.eventAccessibility.click(); //select method require
+    }
+
+    @Then("user clicks on repeat option and selects never")
+    public void userClicksOnRepeatOptionAndSelectsNever() {
+        eventsPage.repeatBox.click(); //select method required
+    }
+
+    @Then("the user clicks on event importance and selects normal")
+    public void theUserClicksOnEventImportanceAndSelectsNormal() {
+        eventsPage.eventImportance.click(); //select method required
+    }
+
+    @And("the user clicks send button")
+    public void theUserClicksSendButton() {
+        eventsPage.sendButton.click();
+    }
 }
