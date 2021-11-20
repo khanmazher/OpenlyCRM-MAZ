@@ -35,6 +35,9 @@ public class EventsPage extends BasePage {
     @FindBy(id = "feed-cal-tz-fromcal_3Jcl")
     public WebElement timezoneFrom;
 
+    @FindBy(value = "Europe/Istanbul");
+
+
     @FindBy(id = "feed-cal-tz-tocal_3Jcl")
     public WebElement timezoneTo;
 
