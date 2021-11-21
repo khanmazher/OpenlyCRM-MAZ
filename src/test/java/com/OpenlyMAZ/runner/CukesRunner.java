@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         plugin = {"json:target/cucumber.json",
                 "html:target/default-html-reports"},
         features = "src/test/resources/features",
-        glue = "com/OpenlyMAZ/stepDefinations",
-        dryRun = true,
+        glue = "com/OpenlyMAZ/stepDefinition",
+        dryRun = false,
         tags = "@WIP"
 )
 public class CukesRunner {

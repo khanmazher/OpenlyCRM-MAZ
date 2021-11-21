@@ -17,7 +17,7 @@ public class EventsPage extends BasePage {
     @FindBy(id = "feed-cal-event-namecal_3Jcl")
     public WebElement eventName;
 
-    @FindBy(name = "DATE_FROM")
+    /*@FindBy(name = "DATE_FROM")
     public WebElement dateFrom;
 
     @FindBy(name = "TIME_FROM")
@@ -34,9 +34,6 @@ public class EventsPage extends BasePage {
 
     @FindBy(id = "feed-cal-tz-fromcal_3Jcl")
     public WebElement timezoneFrom;
-
-    @FindBy(value = "Europe/Istanbul");
-
 
     @FindBy(id = "feed-cal-tz-tocal_3Jcl")
     public WebElement timezoneTo;
@@ -76,7 +73,7 @@ public class EventsPage extends BasePage {
     public WebElement repeatBox;
 
     @FindBy(id = "event-importancecal_3Jcl")
-    public WebElement eventImportance;
+    public WebElement eventImportance;*/
 
     @FindBy(id = "blog-submit-button-save")
     public WebElement sendButton;
